@@ -1,0 +1,22 @@
+#include <unistd.h> // Include the unistd.h header, which provides the write function.
+
+void ft_print_alphabet(void) {
+    char c; // Declare a char variable 'c'.
+    c = 'a'; // Initialize 'c' with the value 'a'.
+
+    while (c >= 'a' && c <= 'z') { // While 'c' is a lowercase letter ('a' to 'z').
+        write(1, &c, 1); // Use the write function to print 'c' to the console (standard output).
+        c++; // Increment 'c' to move to the next character in the alphabet.
+
+        if (c > 'z') {
+            // If 'c' is greater than 'z', exit the loop.
+            break;
+        }
+    }
+}
+
+int main() {
+    ft_print_alphabet(); // Call the ft_print_alphabet function to print the alphabet.
+    return (0); // Return 0 to indicate successful program execution.
+}
+
